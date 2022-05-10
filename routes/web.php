@@ -21,18 +21,21 @@ Route::get('/', function (Request $request) {
 
     $q = $request->input('q');
     if ($q != '') {
-        # code...
         $users = User::where('name', 'LIKE', "%$q%")->get();
         if ($users->count() == 0) {
             $genre = Genre::where('genre', 'LIKE', "%$q%")->get();
-            // $genreid = $genre->id;
             $users = User::where('genre_id', $genre[0]->id)->get();
 
         }
     }
-    // $genres = Genre::all();
     return view('welcome', compact('users'));
 });
 
 
-// ->orWhere('genre', 'like', "%q%")->get()
+
+Route::get('/user2', function (Request $request) {
+    $q = $request->input('q');
+    $users = User::where('name', 'like', "%$q%")->orWhere('age', 'like', "%$q%")->get();
+    return view('pages.afficheUser2', compact('users'));
+});
+

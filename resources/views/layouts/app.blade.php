@@ -18,7 +18,10 @@
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/article">article</a>
+                    <a class="nav-link active" aria-current="page" href="/">User</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/user2">User2</a>
                   </li>
                 </ul>
               </div>

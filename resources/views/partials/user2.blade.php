@@ -1,6 +1,6 @@
 <section>
     <div class="w-25 mx-auto">
-        <form action="/" method="GET">
+        <form action="/user2" method="GET">
             <input placeholder="trier" class="form-control bg-success text-white" type="text" name="q" >
             <button type="submit">Chercher</button>
             </form>
@@ -10,7 +10,7 @@
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">name</th>
-                <th scope="col">genre</th>
+                <th scope="col">age</th>
             </tr>
         </thead>
         <tbody>
@@ -18,7 +18,7 @@
                 <tr>
                     <th scope="row">{{ $user->id }} </th>
                     <td>{{ $user->name }} </td>
-                    <td>{{  $user->genre->genre }} </td>
+                    <td>{{  $user->age }} </td>
                 </tr>
             @endforeach
         </tbody>
